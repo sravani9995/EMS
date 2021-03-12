@@ -1,0 +1,119 @@
+.modulebtn{
+    border:none;
+    outline:none;
+    color:white;
+    background-color: goldenrod;
+    padding:5px 10px 5px 10px;
+    float:right;
+    border-radius:20px;
+}
+td,th,tr,thead{
+    border:1px solid black;
+} 
+/* .id{
+    border:none;
+    outline:none;
+    border-bottom: 1px solid black;
+    margin-left:70px;
+}
+.projectname2{
+    border:none;
+    outline:none;
+    border-bottom: 1px solid black;
+    margin-left:90px;
+}
+.projectname3{
+    border:none;
+    outline:none;
+    border-bottom: 1px solid black;
+    margin-left:90px;
+} */
+.addbtn{
+    background-color: blue;
+    color:white;
+    outline:none;
+    border:none;
+    border-radius: 20px;
+    width:70px;
+    padding:5px 10px 5px 10px;
+}
+.clearbtn{
+    background: blue;
+    margin-left:10px;
+    color:white;
+    outline:none;
+    border:none;
+    border-radius:20px;
+    width:70px;
+    padding:5px 10px 5px 10px;
+}
+.select{
+    border:none;
+    outline:none;
+}
+/* .projectname{
+    border:none;
+    outline:none;
+    border-bottom:1px solid black;
+} */
+.updatebtn{
+    background-color:blue;
+    color:white;
+    border:none;
+    outline:none;
+    border-radius:20px;
+    padding:5px 10px 5px 10px;
+}
+/* .projectid{
+    border:none;
+    outline:none;
+    border-bottom: 1px solid black;
+    margin-left:100px;
+}
+.projectname1{
+    border:none;
+    outline:none;
+    border-bottom: 1px solid black;
+    margin-left:70px;
+} */
+/* .moduleid{
+    border:none;
+    outline:none;
+    border-bottom: 1px solid black;
+    margin-left:90px;
+} */
+.head{
+    color:goldenrod;
+}
+table tr:nth-child(even){
+    background-color:whitesmoke;
+}
+/* .modulename{
+    border:none;
+    outline:none;
+    border-bottom: 1px solid black;
+    margin-left:60px;
+} */
+.deletebtn{
+    background-color: blue;
+    color:white;
+    border:none;
+    outline:none;
+    border-radius:20px;
+    padding:5px 10px 5px 10px;
+}
+.cancelbtn{
+     background-color: blue;
+    color:white;
+    margin-left:5px;
+    border:none;
+    outline:none;
+    border-radius:20px;
+    padding:5px 10px 5px 10px;
+}
+.editbtn{
+    outline:none;
+    border:none;
+    margin-left:10px;
+    margin-bottom: 10px;
+}

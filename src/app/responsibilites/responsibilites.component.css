@@ -1,0 +1,13 @@
+#btn{
+    background-color: blue;
+    color:white;
+    border:none;
+    outline:none;
+}
+td,th,tr,thead{
+    border:1px solid black;
+} 
+.row{
+    display:flex; 
+
+}

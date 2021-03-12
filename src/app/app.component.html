@@ -1,0 +1,67 @@
+<div class="container-fulid">
+  <div class="col-xs-12">
+    <div class="column">
+      <!-- <mat-sidenav-container>
+        <mat-sidenav mode="side" [opened]="isshowing">
+        </mat-sidenav>
+      <mat-sidenav-content>
+        <mat-icon (click)="toggleSidenav()">Menu</mat-icon>
+        <!-- main -->
+    <!-- </mat-sidenav-content>
+    
+      </mat-sidenav-container> --> 
+      
+        
+          <div class="d-flex  bg-primary">
+            <div class="p-2 "><img src="/assets/users1.jpg"  style="width:50px;"></div>
+            <div class="p-2 "><span style="color: black;">Employee Management System</span></div>
+            <div class="p-2 ml-auto"><button  type="signup" class="btn" data-toggle="modal" data-target="#myModal" *ngIf="!logout">Login</button></div>
+            <div class="d-flex justify-content-end mb-4 pt-3">
+              <button type="signup"  class="btn1" data-toggle="modal" data-target="#myModal" *ngIf="logout">Logout</button>
+            </div>
+            
+          </div>
+          
+          <div class="modal" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <mat-card-content>
+              <form class="container" *ngIf="value=='login'">
+                <div class="d-flex justify-content-center">
+                  <h3 class="p-2 text-primary">Login Details</h3>
+                </div>
+               
+                <div class="text-center">
+                  <mat-form-field apperance='fill'>
+                    <input [(ngModel)]="name" name="username" type="text" matInput fromControllName="name"   placeholder="Enter User Name" class="name">
+                  </mat-form-field><br>
+                  <mat-form-field apperance='fill'>
+                    <input [(ngModel)]="password" name="pwd" class="name"  [type]="hide ?'text':'password'" matInput fromControllName="password"
+                      placeholder="Enter Password" >
+                      <i class="fa fa-eye" aria-hidden="true" (click)="hide=!hide" id="eye"></i>
+                  </mat-form-field><br>
+                  <p *ngIf="valid">please fill the required fields</p>
+                  <a href="#" class="text-center" class="text-primary"> Forget Password</a><br><br>
+                  <button mat-raised-button (click)="log()" class="log" data-dismiss="modal">Login</button>
+
+
+                  <p>New to Ems? please<a href="#" class="text-primary">Register</a></p>
+                  </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn-danger" data-dismiss="modal">Close</button>
+                </div>
+              </form>
+    
+          </mat-card-content>
+           </div>
+        </div>
+         </div> 
+    </div>
+  </div>
+    </div>
+  
+     <router-outlet></router-outlet>
+     
+    
+
+     

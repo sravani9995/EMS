@@ -1,0 +1,31 @@
+.btn{
+    margin-right:9px;
+    color:black;
+    background-color: white;
+    margin-top:5px;
+    outline:none;
+    border:none;
+   }
+   .btn1{
+       margin-right:10px;
+       padding:0px 5px 0px 5px;
+       color:black;
+       background-color: white;
+    
+    outline:none;
+    border:none;
+   }
+.name{
+    outline:none;
+    border:none;
+
+}
+.log{
+background-color:blue;
+color:white;
+}
+#eye{
+    position: absolute;
+    
+}
+

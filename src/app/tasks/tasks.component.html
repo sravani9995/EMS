@@ -1,0 +1,456 @@
+<mat-card>
+    <div class="row">
+        <div class="col-lg-12">
+            <span>
+                <span style="color:goldenrod ;">Manage Tasks</span>
+                <button class="btn" data-toggle="modal" data-target="#modaltask" data-backdrop="false">Create
+                    Task</button>
+                <button class="btn">View Team Tasks</button>
+
+            </span><br><br><br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <table class="table-responsive text-center">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Project Id</th>
+                                    <th>Project Name</th>
+                                    <th>Module Id</th>
+                                    <th>Module Name</th>
+                                    <th>Sub Module Id</th>
+                                    <th>Sub Module Name</th>
+                                    <th>Task Id</th>
+                                    <th>Created Date</th>
+                                    <th>Freezing Time</th>
+                                    <th>Actions</th>
+                                    <th>Assign Task to User</th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let task of array">
+                                    <td>{{task.Sno}}</td>
+                                    <td>{{task.projectid}}</td>
+                                    <td>{{task.projectname}}</td>
+                                    <td>{{task.Moduleid}}</td>
+                                    <td>{{task.modulename}}</td>
+                                    <td>{{task.submoduleeid}}</td>
+                                    <td>{{task.submodulename}}</td>
+                                    <td>{{task.taskid}}</td>
+                                    <td>{{task.Createddate}}</td>
+                                    <td>{{task.FreezingTime}}</td>
+                                    <td> <span><button mat-raised-button data-toggle="modal" data-backdrop="false"
+                                                data-target="#modaledit" class="editbtn">Edit</button> <br> <button mat-raised-button
+                                                data-backdrop="false" data-toggle="modal"
+                                                data-target="#modaldelete" class="editbtn">Delete</button></span></td>
+                                    <td> <span><button mat-raised-button data-backdrop="false" data-toggle="modal"
+                                                data-target="#modalassign" class="editbtn">Assign</button> <button
+                                                mat-raised-button class="editbtn">View</button></span></td>
+
+                                </tr>
+                                <!-- <tr>
+                                    <td>2</td>
+                                    <td>PROJ_002</td>
+                                    <td>Cloud</td>
+                                    <td>MOD_002</td>
+                                    <td>Module2</td>
+                                    <td>SUB_MOD_002</td>
+                                    <td>Submodule2</td>
+                                    <td>TASK_002</td>
+                                    <td>27-2-2021 10:30:53am</td>
+                                    <td>27-2-2021 10:30:53am</td>
+                                    <td><span><button mat-raised-button data-toggle="modal" data-backdrop="false"
+                                                data-target="#modaledit" class="editbtn">Edit</button> <button mat-raised-button
+                                                data-toggle="modal" data-target="#modaldelete" class="editbtn">Delete</button></span>
+                                    </td>
+                                    <td><span><button mat-raised-button data-toggle="modal"
+                                                data-target="#modalassign" class="editbtn">Assign</button> <button
+                                                mat-raised-button class="editbtn">View</button></span></td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+
+                    </table>
+                </div>
+            </div>
+
+            <div class="container">
+                <!-- The Modal -->
+                <div class="modal" id="modaltask">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body text-center">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h3 class="text-primary">Create Task Form</h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6" style="margin-top:4%">
+                                        Select Project Id:
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field>
+                                            <mat-label>SelectProjectId</mat-label>
+                                            <mat-select required>
+                                                <mat-option>Option</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-6" style="margin-top: 4%">
+                                        Select Module Id:
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field>
+                                            <mat-label>SelectModuleId</mat-label>
+                                            <mat-select required>
+                                                <mat-option>Option</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-6" style="margin-top: 4%">
+                                        Select Module Id:
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field>
+                                            <mat-label>SelectModuleId</mat-label>
+                                            <mat-select required>
+                                                <mat-option>Option</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-6" style="margin-top: 4%">
+                                        Select Sub Module Id:
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field>
+                                            <mat-label>SelectSubModuleId</mat-label>
+                                            <mat-select required>
+                                                <mat-option>Option</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-6" style="margin-top: 4%">
+                                        Sprint Id:
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field>
+                                            <mat-label>SelectSprintId</mat-label>
+                                            <mat-select required>
+                                                <mat-option>Option</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-6" style="margin-top: 4%">
+                                        Task Name:
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field>
+                                            <mat-label required></mat-label>
+                                            <textarea matInput value="enter task name"></textarea>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-6" style="margin-top: 4%">
+                                        Starting Time:
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field class="example-form-field">
+                                            <mat-label>Choose a date</mat-label>
+                                            <input matInput required>
+                                            <mat-datepicker-toggle matSuffix></mat-datepicker-toggle>
+
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-6" style="margin-top: 4%">
+                                        Ending Time:
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field class="example-form-field">
+                                            <mat-label>Choose a date</mat-label>
+                                            <input matInput required>
+                                            <mat-datepicker-toggle matSuffix></mat-datepicker-toggle>
+
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-6" style="margin-top: 4%">
+                                        Task Note:
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field>
+                                            <mat-label required></mat-label>
+                                            <textarea matInput value="enter task note"></textarea>
+                                        </mat-form-field>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container">
+                <!-- The Modal -->
+                <div class="modal" id="modaledit">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body text-center">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h3 class="text-primary">Create Task Form</h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6" style="margin-top:4%">
+                                        Select Project Id:
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>projectid</mat-label>
+                                            <input matInput disabled value="PROJ_001">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-6" style="margin-top: 4%">
+                                        Project Name:
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>projectname</mat-label>
+                                            <input matInput disabled value="Ems">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-6" style="margin-top: 4%">
+                                        Select Module Id:
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Moduleid</mat-label>
+                                            <input matInput disabled value="MOD_001">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-6" style="margin-top: 4%">
+                                        Select Sub Module Id:
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label></mat-label>
+                                            <input matInput disabled>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-6" style="margin-top: 4%">
+                                        Select Sub Module Name:
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label></mat-label>
+                                            <input matInput disabled>
+                                        </mat-form-field>
+                                    </div>
+
+                                    <div class="col-sm-6" style="margin-top: 4%">
+                                        Sprint Id:
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Sprint Id</mat-label>
+                                            <input matInput disabled>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-6" style="margin-top: 4%">
+                                        Task Name:
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field>
+                                            <mat-label required></mat-label>
+                                            <textarea matInput value="enter task name"></textarea>
+                                        </mat-form-field>
+                                    </div>
+
+                                    <div class="col-sm-6" style="margin-top: 4%">
+                                        Task Note:
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field>
+                                            <mat-label required></mat-label>
+                                            <textarea matInput value="enter task note"></textarea>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <button type="button" class="updatebtn">Update</button>
+                                        <button type="button" class="clearbtn">Clear</button>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container">
+                <!-- The Modal -->
+                <div class="modal" id="modaldelete">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body text-center">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h3 class="text-primary">Delete Project Form</h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <p class="text-center">
+                                        Are You Sure Want to Delete?
+                                    </p>
+
+
+                                    <div class="col-sm-12">
+                                        <button type="button" class="updatebtn">Delete</button>
+                                        <button type="button" class="clearbtn">Cancel</button>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container">
+                <!-- The Modal -->
+                <div class="modal" id="modalassign">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body text-center">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h3 class="text-primary">Assign Task To User</h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6" style="margin-top: 4%">
+                                        Task Id:
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Enter Task Name</mat-label>
+                                            <input matInput disabled>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-6" style="margin-top: 4%">
+                                        Task Name:
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field>
+                                            <mat-label required></mat-label>
+                                            <textarea matInput value="enter task name"></textarea>
+                                        </mat-form-field>
+                                    </div>
+
+                                    <div class="col-sm-6" style="margin-top: 4%">
+                                        Task Note:
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field>
+                                            <mat-label required></mat-label>
+                                            <textarea matInput value="enter task note"></textarea>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-6" style="margin-top: 4%">
+                                        Select User :
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field>
+                                            <mat-label>Select User</mat-label>
+                                            <mat-select>
+                                                <mat-option value="one">First option</mat-option>
+                                                <mat-option value="two">Second option</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <button type="button" class="updatebtn">Add</button>
+                                        <button type="button" class="clearbtn">Clear</button>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+</mat-card>

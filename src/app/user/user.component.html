@@ -1,0 +1,319 @@
+<mat-card>
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 style="color:goldenrod;margin-top:20px;">Manage Users
+        <span><button class="managebtn" data-backdrop="false" data-toggle="modal" data-target="#myuser">ADD
+            USER</button></span>
+      </h2> <br>
+      <div class="container">
+        <div class="modal" id="myuser">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header ">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body text-center">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h3 class="text-primary">Add User Form</h3>
+
+                  </div>
+
+                </div>
+                <div class="row">
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    First Name:
+                  </div>
+                  <div class="col-sm-6">
+
+                    <mat-form-field class="example-full-width">
+                      <!-- <mat-label>Select Project Id:</mat-label> -->
+                      <input matInput  class="select">
+                    </mat-form-field>
+                  </div>
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    Middle Name:
+                  </div>
+                  <div class="col-sm-6">
+                    <mat-form-field class="example-full-width">
+                      <!-- <mat-label>Project Name:</mat-label> -->
+                      <input matInput disabled class="select">
+                    </mat-form-field>
+                  </div>
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    Last Name:
+                  </div>
+                  <div class="col-sm-6">
+                    <mat-form-field class="example-full-width">
+                      <!-- <mat-label>Sprint Name:</mat-label> -->
+                      <input matInput  class="select" required>
+                    </mat-form-field>
+                  </div>
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    User Name:
+                  </div>
+                  <div class="col-sm-6">
+                    <mat-form-field >
+                      <!-- <mat-label>Choose a date</mat-label> -->
+                      <input matInput disabled  class="select">
+
+                    </mat-form-field>
+                  </div>
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    Password:
+                  </div>
+                  <div class="col-sm-6">
+                    <mat-form-field >
+                      <!-- <mat-label>Choose a date</mat-label> -->
+                      <input matInput  class="select">
+                    </mat-form-field>
+                  </div>
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    MobileNumber:
+                  </div>
+                  <div class="col-sm-6">
+                    <mat-form-field >
+                      <!-- <mat-label>Choose a date</mat-label> -->
+                      <input matInput  class="select">
+                    </mat-form-field>
+                  </div>
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    Email Id:
+                  </div>
+                  <div class="col-sm-6">
+                    <mat-form-field >
+                      <!-- <mat-label>Choose a date</mat-label> -->
+                      <input matInput  class="select">
+                    </mat-form-field>
+                  </div>
+
+                  <div class="col-sm-12">
+                    <button type="button" class="btn btn-primary" class="addbtn" (click)="add()">Add</button>
+                    <button type="button" class="btn btn-primary" class="clearbtn">Clear</button>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <table class="table-responsive" id="tab">
+            <table class="table table-bordered">
+              <thead>
+                <tr style="color:goldenrod">
+                  <th>S.No</th>
+                  <th>Emp Id</th>
+                  <th>User Name</th>
+                  <th>First Name</th>
+                  <th>Middle Name</th>
+                  <th>Last Name</th>
+                  <th>Created By</th>
+                  <th>Created Date</th>
+                  <th colspan="2">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let ele of arr">
+                  <td>{{ele.SNo}}</td>
+                  <td>{{ele.EmpId}}</td>
+                  <td>{{ele.UserName}}</td>
+                  <td>{{ele.FirstName}}</td>
+                  <td>{{ele.MiddleName}}</td>
+                  <td>{{ele.LastName}}</td>
+                  <td>{{ele.CreatedBy}}</td>
+                  <td>{{ele.Createddate}}</td>
+                  <td>
+                    <button data-toggle="modal" data-backdrop="false" data-target="#modaledit"
+                      class="editbtn">Edit</button>
+                      <button data-toggle="modal" data-backdrop="false" data-target="#modaldelete" class="editbtn">Delete</button>
+
+                  </td>
+                                       
+                </tr>
+                  
+                <!-- <tr *ngFor="let ele of arr" >
+                  <td>{{ele.SNo}}</td>
+                  <td>{{ele.EmpId}}</td>
+                  <td>{{ele.UserName}}</td>
+                  <td>{{ele.FirstName}}</td>
+                  <td>{{ele.MiddleName}}</td>
+                  <td>{{ele.LastName}}</td>
+                  <td>{{ele.CreatedBy}}</td>
+                  <td>{{ele.Createddate}}</td>
+                  <td>
+                    <button data-toggle="modal" data-backdrop="false" data-target="#modaledit"
+                      class="editbtn">Edit</button>
+                      <button data-toggle="modal" data-backdrop="false" data-target="#modaldelete"
+                      class="editbtn">Delete</button>
+                  </td>
+                  
+                </tr> -->
+
+              </tbody>
+            </table>
+
+          </table>
+
+
+        </div>
+      </div>
+      <div class="container">
+        <div class="modal" id="modaledit">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body text-center">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h3 class="text-primary">Edit User Form</h3>
+
+                  </div>
+
+                </div>
+                <div class="row">
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    Employee Id:
+                  </div>
+                  <div class="col-sm-6">
+                    <mat-form-field >
+                      <mat-label>Enter Employee Id</mat-label>
+                      <input matInput value="EMP_001" class="select">
+                    </mat-form-field>
+                  </div>
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    First Name:
+                  </div>
+                  <div class="col-sm-6">
+
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Enter First Name</mat-label>
+                      <input matInput value="Sashi" class="select">
+                    </mat-form-field>
+                  </div>
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    Middle Name:
+                  </div>
+                  <div class="col-sm-6">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Enter Middle Name</mat-label>
+                      <input matInput disabled value="Rekha" class="select">
+                    </mat-form-field>
+                  </div>
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    Last Name:
+                  </div>
+                  <div class="col-sm-6">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Enter LastName</mat-label>
+                      <input matInput value="kandimalla" class="select" required>
+                    </mat-form-field>
+                  </div>
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    User Name:
+                  </div>
+                  <div class="col-sm-6">
+                    <mat-form-field >
+                      <mat-label>Enter User Name</mat-label>
+                      <input matInput disabled value="Sashirekha" class="select">
+
+                    </mat-form-field>
+                  </div>
+
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    MobileNumber:
+                  </div>
+                  <div class="col-sm-6">
+                    <mat-form-field >
+                      <mat-label>Enter MobileNumber</mat-label>
+                      <input matInput value="9912947892" class="select">
+                    </mat-form-field>
+                  </div>
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    Email Id:
+                  </div>
+                  <div class="col-sm-6">
+                    <mat-form-field >
+                      <mat-label>Enter Email</mat-label>
+                      <input matInput value="abc@gmail.com" class="select">
+                    </mat-form-field>
+                  </div>
+
+                  <div class="col-sm-12">
+                    <button type="button" class="btn btn-primary" class="addbtn">Add</button>
+                    <button type="button" class="btn btn-primary" class="clearbtn">Clear</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="container">
+        <div class="modal" id="modaldelete">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body text-center">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h3 class="text-primary"> Delete Modules Form</h3>
+
+                  </div>
+
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h3 class="text-center"> Are You Sure Want to delete?</h3>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <button type="button" class="btn btn-primary" class="addbtn">Delete</button>
+                    <button type="button" class="btn btn-primary" class="clearbtn">Cancel</button>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</mat-card>

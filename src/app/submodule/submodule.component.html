@@ -1,0 +1,298 @@
+<mat-card>
+  <div class="row">
+    <div class="col-sm-12">
+      <span>
+        <span class="main">Manage Sub Modules</span>
+        <button type="button" data-toggle="modal" data-target="#mymodalsubmodule" data-backdrop="false"
+          class="btn">Create Sub Module</button>
+      </span>
+      <br><br>
+      <div class="container">
+        <div class="modal" id="mymodalsubmodule">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body text-center">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h3 class="text-primary">Create Sub Module Form</h3>
+
+                  </div>
+
+                </div>
+                <div class="row">
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    Select Project Id:
+                  </div>
+                  <div class="col-sm-6">
+                    <mat-form-field>
+                      <mat-label required>Select Project Id</mat-label>
+                      <mat-select>
+                        <mat-option value="option"></mat-option>
+                      </mat-select>
+                    </mat-form-field>
+
+
+                  </div>
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    Project Name:
+                  </div>
+                  <div class="col-sm-6">
+                    <mat-form-field class="example-full-width">
+                      <!-- <mat-label>Project Name:</mat-label> -->
+                      <input matInput disabled value="Project Name" class="select">
+                    </mat-form-field>
+                  </div>
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    Select Module Id:
+                  </div>
+                  <div class="col-sm-6">
+                    <mat-form-field>
+                      <mat-label>Select Module Id</mat-label>
+                      <mat-select>
+                        <mat-option value="option"></mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    Module Name:
+                  </div>
+                  <div class="col-sm-6">
+                    <mat-form-field>
+                      <!-- <mat-label>Choose a date</mat-label> -->
+                      <input matInput disabled value="Module Name" class="select">
+
+                    </mat-form-field>
+                  </div>
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    Sub Module Name:
+                  </div>
+                  <div class="col-sm-6">
+                    <mat-form-field>
+                      <!-- <mat-label>Choose a date</mat-label> -->
+                      <input matInput value="Sub Module Name" class="select" required>
+                    </mat-form-field>
+                  </div>
+
+                  <div class="col-sm-12">
+                    <button type="button" class="btn btn-primary" class="addbtn">Add</button>
+                    <button type="button" class="btn btn-primary" class="clearbtn">Clear</button>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="row">
+        <div class="col-sm-12">
+          <table class="table-responsive">
+            <table class="table table-bordered">
+              <thead style="color:goldenrod;">
+                <tr>
+                  <th>S.No</th>
+                  <th>Project Id</th>
+                  <th>Project Name</th>
+                  <th>Module Id</th>
+                  <th>Module Name</th>
+                  <th>Sub Module Id</th>
+                  <th>Sub Module Name</th>
+                  <th>Created By</th>
+                  <th>Created Date</th>
+                  <th>Modified Date</th>
+                  <th colspan="2">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let sub of array">
+                  <td>{{sub.Sno}}</td>
+                  <td>{{sub.projectid}}</td>
+                  <td>{{sub.projectname}}</td>
+                  <td>{{sub.Moduleid}}</td>
+                  <td>{{sub.modulename}}</td>
+                  <td>{{sub.submoduleeid}}</td>
+                  <td>{{sub.submodulename}}</td>
+                  <td>{{sub.CreatedBy}}</td>
+                  <td>{{sub.Createddate}}</td>
+                  <td>{{sub.Modifieddate}}</td>
+                  <td><button type="button" data-backdrop="false" data-toggle="modal" data-target="#submoduleedit"
+                      class="editbtn">Edit</button>
+                    <button type="button" data-backdrop="false" data-toggle="modal" data-target="#submoduledelete"
+                      class="editbtn">Delete</button>
+                  </td>
+                </tr>
+                <!-- <tr>
+                <td>2</td>
+                <td>PROJ_002</td>
+                <td>cloud</td>
+                <td>MOD_002</td>
+                <td>Module1</td>
+                <td>SUB_MOD_002</td>
+                <td>Submodule1</td>
+                <td>Admin</td>
+                <td>1-02-2021 2:30:10pm</td>
+                <td>5-02-2021 9:30:10am</td>
+                <td><button type="button" data-backdrop="false" data-toggle="modal"
+                    data-target="#submoduleedit" class="editbtn">Edit</button>
+                    <button type="button" data-backdrop="false" data-toggle="modal"
+                    data-target="#submoduledelete" class="editbtn">Delete</button>
+                  </td>
+              </tr> -->
+              </tbody>
+            </table>
+          </table>
+
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="modal" id="submoduleedit">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body text-center">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h3 class="text-primary">Edit Sub Module Form</h3>
+
+                  </div>
+
+                </div>
+                <div class="row">
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    Project Id:
+                  </div>
+                  <div class="col-sm-6">
+
+                    <mat-form-field class="example-full-width">
+                      <mat-label> Project Id</mat-label>
+                      <input matInput disabled value="PROJ_001" class="select">
+                    </mat-form-field>
+                  </div>
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    Project Name:
+                  </div>
+                  <div class="col-sm-6">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Project Name</mat-label>
+                      <input matInput disabled value="Ems" class="select">
+                    </mat-form-field>
+                  </div>
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    Module Id:
+                  </div>
+                  <div class="col-sm-6">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Module Id</mat-label>
+                      <input matInput disabled value="MOD_001" class="select">
+                    </mat-form-field>
+                  </div>
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    Module Name:
+                  </div>
+                  <div class="col-sm-6">
+                    <mat-form-field>
+                      <mat-label>Module Name</mat-label>
+                      <input matInput disabled value="Module 1" class="select">
+
+                    </mat-form-field>
+                  </div>
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    Sub Module Id:
+                  </div>
+                  <div class="col-sm-6">
+                    <mat-form-field>
+                      <mat-label>Sub Module Id</mat-label>
+                      <input matInput disabled value="SUB_MOD_001" class="select">
+                    </mat-form-field>
+                  </div>
+                  <div class="col-sm-6" style="margin-top: 3%;">
+                    Sub Module Name:
+                  </div>
+                  <div class="col-sm-6">
+                    <mat-form-field>
+                      <mat-label>Sub Module Name</mat-label>
+                      <input matInput value="Submodule1" class="select">
+                    </mat-form-field>
+                  </div>
+
+                  <div class="col-sm-12">
+                    <button type="button" class="btn btn-primary" class="updatebtn">Update</button>
+                    <button type="button" class="btn btn-primary" class="clearbtn">Clear</button>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="container">
+        <div class="modal" id="submoduledelete">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body text-center">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h3 class="text-primary"> Delete Sprints Form</h3>
+
+                  </div>
+
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h3 class="text-center"> Are You Sure Want to delete?</h3>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <button type="button" class="btn btn-primary" class="addbtn">Delete</button>
+                    <button type="button" class="btn btn-primary" class="clearbtn">Cancel</button>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-card>

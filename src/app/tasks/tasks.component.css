@@ -1,0 +1,52 @@
+.btn1{
+    outline:none;
+    border-radius: 20px;
+    border:none;
+    background-color: goldenrod;
+    color:white;
+    float:right;
+}
+.btn{
+    outline:none;
+    border-radius: 40px;
+    border:none;
+    background-color: goldenrod;
+    color:white;
+    float:right;
+    margin-left:10px;
+}
+.editbtn{
+    outline:none;
+    border:none;
+    margin-left:10px;
+    margin-bottom: 10px;
+}
+td,th,tr,thead{
+    border:1px solid black;
+} 
+.updatebtn{
+    border-radius: 20px;
+    background-color: blue;
+    color:white;
+    border:none;
+    outline:none;
+    padding:10px 20px 10px 20px;
+}
+.clearbtn{
+    margin-left:10px;
+    border-radius: 20px;
+    background-color: blue;
+    color:white;
+    border:none;
+    outline:none;
+    padding:10px 20px 10px 20px;
+}
+.manage{
+    color:goldenrod;
+}
+.select{
+    border:none;
+    outline:none;
+
+
+}

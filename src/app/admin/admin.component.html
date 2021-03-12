@@ -1,0 +1,126 @@
+<mat-sidenav-container>
+    <mat-sidenav mode="side" [opened]="isshowing">
+        <!-- <nav class="navbar navbar-expand-lg navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#target">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            
+            <div class="collapse navbar-collapse" id="target">
+                <nav class="navbar">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <img src="/assets/dashboard.jpg" height="40px">
+                            <a routerLink="/admin/dashboard" class="nav-link">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <img src="/assets/users.jpg" height="40px;">
+
+                            <a routerLink="/admin/user" class="nav-link">Users</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <img src="/assets/roles.jpg" height="40px;">
+                            <a routerLink="/admin/role" class="nav-link">Roles</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <img src="/assets/project.jpg" height="40px;">
+                            <a routerLink="/admin/project" class="nav-link">Projects</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <img src="/assets/module.jpg" height="40px;">
+                            <a routerLink="/admin/module" class="nav-link">Modules</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <img src="/assets/project.jpg" height="40px;">
+                            <a routerLink="/admin/submodule" class="nav-link">Submodules</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <img src="/assets/project.jpg" height="40px;">
+                            <a routerLink="/admin/sprints" class="nav-link">Sprints</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <img src="/assets/task.jpg" height="40px;">
+                            <a routerLink="/admin/tasks" class="nav-link">Tasks</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <img src="/assets/res.jpg" height="40px;">
+                            <a routerLink="/admin/responsibilites" class="nav-link">Responsibilites</a>
+                        </li>
+                        <li class="nav-item">
+
+                            <a class="nav-link" href="#">>>></a>
+                        </li>
+                    </ul>
+
+
+                </nav> -->
+            <!-- </div>
+        </nav> -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <img src="/assets/dashboard.jpg" height="40px">
+                <a routerLink="/admin/dashboard" class="nav-link">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <img src="/assets/users.jpg" height="40px;">
+
+                <a routerLink="/admin/user" class="nav-link">Users</a>
+
+            </li>
+
+            <li class="nav-item">
+                <img src="/assets/roles.jpg" height="40px">
+                <a routerLink="/admin/role" class="nav-link">Roles</a>
+            </li>
+
+            <li class="nav-item">
+                <img src="/assets/project.jpg" height="40px">
+                <a routerLink="/admin/project" class="nav-link">Projects</a>
+            </li>
+
+
+            <li class="nav-item">
+                <img src="/assets/module.jpg" height="40px">
+                <a routerLink="/admin/module" class="nav-link">Modules</a>
+            </li>
+
+
+            <li class="nav-item">
+                <img src="/assets/project.jpg" height="40px">
+                <a routerLink="/admin/submodule" class="nav-link">Submodules</a>
+            </li>
+
+            <li class="nav-item">
+                <img src="/assets/project.jpg" height="40px">
+                <a routerLink="/admin/sprints" class="nav-link">Sprints</a>
+            </li>
+
+            <li class="nav-item">
+                <img src="/assets/task.jpg" height="40px">
+                <a routerLink="/admin/tasks" class="nav-link">Tasks</a>
+            </li>
+
+            <li class="nav-item">
+                <img src="/assets/res.jpg" height="40px">
+                <a routerLink="/admin/responsibilites" class="nav-link">Responsibilites</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">>>></a>
+            </li>
+        </ul>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-icon (click)="toggleSidenav()">menu</mat-icon>
+        <!-- main -->
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

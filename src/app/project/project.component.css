@@ -1,0 +1,103 @@
+.project{
+    outline:none;
+    border:none;
+    border-bottom:"1px solid black";
+    margin-left:50px;
+
+}
+#addproject{
+   background-color:goldenrod;
+   color:white;
+   border-radius:20px;
+   border:none;
+   outline:none; 
+   margin-right: 20px;
+   padding-left:"20px 15px 20px 15px";
+   float:right;
+}
+.editbtn{
+
+    outline:none;
+    border:none;
+    margin-left:10px;
+}
+.assignbtn{
+    outline:none;
+    border:none;
+    margin-left:10px;
+}
+.id{
+    border:none;
+    outline:none;
+    border-bottom:1px solid black;
+}
+.projectid{
+    outline:none;
+    border:none;
+    border-bottom:1px solid black;
+    margin-left:100px;
+}
+.projectid1{
+    outline:none;
+    border:none;
+    border-bottom:1px solid black;
+    margin-left:70px;
+}
+.updatebtn{
+    background-color: blue;
+    color:white;
+    outline:none;
+    border-radius: 20px;
+    border:none;
+}
+.cancelbtn{
+    background-color: blue;
+    color:white;
+    outline:none;
+    margin-left:5px;
+    border-radius:20px;
+    border:none;
+}
+.deletebtn{
+    background-color: blue;
+    color:white;
+    border-radius:20px;
+    outline:none;
+    border:none;
+}
+.addbtn{
+    background-color: blue;
+    color:white;
+    border:none;
+    outline:none;
+    border-radius:20px;
+}
+.clearbtn{
+    background-color: blue;
+    color:white;
+    border:none;
+    outline:none;
+    margin-left:5px;
+    border-radius:20px;
+}
+td,th,tr,thead{
+    border:1px solid black;
+} 
+
+.savebtn{
+    background-color: blue;
+    color:white;
+    border:none;
+    outline:none;
+    border-radius:20px;
+}
+#projectname{
+    border:none;
+    outline:none;
+    margin-left:100px;
+    border-bottom:1px solid black;
+}
+.select{
+    border:none;
+    outline:none;
+}

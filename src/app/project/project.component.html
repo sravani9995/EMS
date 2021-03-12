@@ -1,0 +1,357 @@
+<mat-card>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <span>
+                <span style="color:goldenrod;">Manage Projects</span>
+                <button type="button" data-backdrop="false" data-toggle="modal" data-target="#modalprojectadd"
+                    id="addproject">Add
+                    Projects</button>
+            </span><br><br>
+            <div class="container">
+                <div class="modal" id="modalprojectadd">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body text-center">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h3 class="text-primary">Add Project Form</h3>
+
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6" style="margin-top: 3%;">
+                                        Project Name:
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field class="example-full-width">
+                                            <!-- <mat-label>Project Name</mat-label>  -->
+                                            <input matInput  value=" Enter Project Name" class="select"
+                                                required>
+                                        </mat-form-field>
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <button type="button" class="btn btn-primary" class="addbtn">Add</button>
+                                            <button type="button" class="btn btn-primary" class="clearbtn">Clear</button>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <table class="table-responsive">
+                        <table class="table table-bordered">
+
+                            <thead>
+                                <tr>
+                                    <th class="name">S.No</th>
+                                    <th>Project Id</th>
+                                    <th>Project Name</th>
+                                    <th> Created By</th>
+                                    <th>Created Date</th>
+                                    <th>Modified Date</th>
+                                    <th>Actions</th>
+                                    <th >Assign Users To Project</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let proj of array">
+                                    <td>{{proj.Sno}}</td>
+                                    <td>{{proj.Projectid}}</td>
+                                    <td>{{proj.Projectname}}</td>
+                                    <td>{{proj.createdby}}</td>
+                                    <td>{{proj.createddate}}</td>
+                                    <td>{{proj.Modifieddte}}</td>
+                                    <td> <button type="button" data-backdrop="false" class="editbtn" data-toggle="modal"
+                                            data-target="#mymodalprojectedit">Edit</button>
+                                            <button type="button" data-backdrop="false" class="editbtn" data-toggle="modal"
+                                            data-target="#mymodalprojectdelete">Delete</button>
+                                        </td>
+                                    <td><button type="button" class="assignbtn" data-backdrop="false"
+                                            data-toggle="modal" data-target="#mymodalprojectassign">Assign</button>
+                                            <button type="button" class="assignbtn" data-toggle="modal"
+                                            data-target="#mymodalprojectview">View</button>
+                                        </td>
+                                </tr>
+                                <!-- <tr>
+                                    <td>2</td>
+                                    <td>PROJ_002</td>
+                                    <td>Cloud</td>
+                                    <td>Admin</td>
+                                    <td>4-02-2021 3:00pm</td>
+                                    <td>8-02-2021 11:00am</td>
+                                    <td> <button type="button" data-toggle="modal" data-target="#mymodalprojectedit"
+                                            class="editbtn">Edit</button>
+                                            <button type="button" data-toggle="modal" data-target="#mymodalprojectdelete"
+                                            class="editbtn">Delete</button>
+                                        </td>
+                                    
+                                    <td><button type="button" class="assignbtn" data-toggle="modal"
+                                            data-target="#mymodalprojectassign">Assign</button>
+                                            <button type="button" class="assignbtn" data-toggle="modal"
+                                            data-target="#mymodalprojectview">View</button>
+                                        </td>
+                                </tr> -->
+                            </tbody>
+
+
+
+                        </table>
+
+                    </table>
+
+
+
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="modal" id="mymodalprojectedit">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body text-center">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h3 class="text-primary">Edit Project Form</h3>
+
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6" style="margin-top: 3%;">
+                                        Project Id:
+                                    </div>
+                                    <div class="col-sm-6">
+
+                                        <mat-form-field class="example-full-width">
+                                            <!-- <mat-label> Project Id</mat-label>  -->
+                                            <input matInput value="Select ProjectId" class="select">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-6" style="margin-top: 3%;">
+                                        Project Name:
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Ems</mat-label>
+                                            <input matInput value=" Enter Project Name" class="select">
+                                        </mat-form-field>
+                                    </div>
+
+
+                                    <div class="col-sm-12">
+                                        <button type="button" class="btn btn-primary" class="addbtn">Update</button>
+                                        
+                                            <button type="button" class="btn btn-primary" class="clearbtn">Clear</button>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="container">
+                <div class="modal" id="mymodalprojectdelete">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body text-center">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h3 class="text-primary"> Delete Modules Form</h3>
+
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h3 class="text-center"> Are You Sure Want to delete?</h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <button type="button" class="btn btn-primary" class="addbtn">Delete</button>
+                                        <button type="button" class="btn btn-primary" class="clearbtn">Cancel</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="modal" id="mymodalprojectassign">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body text-center">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h3 class="text-primary">Create Task Form</h3>
+
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6" style="margin-top: 3%;">
+                                        Project Id:
+                                    </div>
+                                    <div class="col-sm-6">
+
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> Project Id</mat-label>
+                                            <input matInput value="PROJ_001" class="select">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-6" style="margin-top: 3%;">
+                                        Project Name:
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Project Name</mat-label>
+                                            <input matInput  value="Ems" class="select">
+                                        </mat-form-field>
+                                    </div>
+
+                                    <div class="col-sm-6" style="margin-top: 3%;">
+                                        <label> Select User Name:</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field >
+                                            <mat-label>Select</mat-label>
+                                            <mat-select>
+                                                <mat-option value="one">First option</mat-option>
+                                                <mat-option value="two">Second option</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-6" style="margin-top: 3%;">
+                                        <label> Select Roll:</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field >
+                                            <mat-label>Select</mat-label>
+                                            <mat-select>
+                                                <mat-option value="one">First option</mat-option>
+                                                <mat-option value="two">Second option</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-sm-12">
+                                    <button type="button" class="btn btn-primary" class="addbtn">Add</button>
+                                    
+                                        <button type="button" class="btn btn-primary" class="clearbtn">Clear</button>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+       
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Assign Users To Project</h2>
+                <table class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Project Name</th>
+                                <th>Emp_Id</th>
+                                <th>Emp_Name</th>
+                                <th>Emp_Role</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Ems</td>
+                                <td>EMP_001</td>
+                                <td>Srija</td>
+                                <td>Teamlead</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>cloud</td>
+                                <td>EMP_002</td>
+                                <td>Anitha</td>
+                                <td>Teammember</td>
+                            </tr>
+                        </thead>
+
+                    </table>
+
+                </table>
+        
+            </div>
+        </div>
+    </div>
+        </div>
+        </mat-card>

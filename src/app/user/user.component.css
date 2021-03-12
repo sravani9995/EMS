@@ -1,0 +1,106 @@
+.managebtn{
+    border-radius:20px;
+    background-color: goldenrod;
+    float:right; 
+    font-size: 13px;
+    outline:none;
+    border:none;
+    padding:5px 10px 5px 10px;
+    color:white;
+}
+
+/* .fname{
+    outline:none;
+    border:none;
+    border-bottom: 1px solid;
+} */
+.addbtn{
+    border-radius: 20px;
+    background-color: blue;
+    color:white;
+    outline:none;
+    width:90px;
+    text-align: center;
+}
+.clearbtn{
+    border-radius: 20px;
+    background-color: blue;
+    color:white;
+    width:80px; 
+    outline:none;
+    margin-left:10px;
+}
+#btn{
+margin-left:30px;
+}
+.editbtn{
+    outline:none;
+    border:none;
+    margin-left:10px;
+}
+table tr:nth-child(even){
+background-color:pink;
+}
+#tab{
+    margin:0px 50px 0px 10px;
+    border:black;
+}
+td,th,tr,thead{
+    border:1px solid black;
+} 
+/* .id{
+    margin-left:150px;
+    outline:none;
+    border:none;
+    border-bottom: 1px solid black;
+}
+.id1{
+    margin-left:130px;
+    outline:none;
+    border:none;
+    border-bottom: 1px solid black;
+}
+.id2{
+    margin-left:125px;
+    outline:none;
+    border:none;
+    border-bottom: 1px solid black;
+}
+.id3{
+    margin-left:165px;
+    outline:none;
+    border:none;
+    border-bottom: 1px solid black;
+}
+.id4{
+    margin-left:140px;
+    outline:none;
+    border:none;
+    border-bottom: 1px solid black;
+} */
+
+.updatebtn{
+    background-color: blue;
+    color:white;
+    border-radius: 20px;
+    outline:none;
+    width:80px; 
+}
+
+.deletebtn{
+    background-color: blue;
+    color:white;
+    border-radius: 20px;
+    outline:none;
+}
+.cancelbtn{
+    background-color: blue;
+    color:white;
+    border-radius: 20px;
+    outline:none;
+    margin-left:5px;
+}
+.select{
+    border:none;
+    outline:none;
+}

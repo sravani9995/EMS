@@ -1,0 +1,87 @@
+.role{
+    outline:none;
+    border:none;
+    border-bottom:1px solid black; 
+    margin-left:100px;
+}
+.addbtn{
+    color:white;
+    background-color: blue;
+    border-radius:20px; 
+    outline:none;
+    border:none;
+}
+.clearbtn{
+    color:white;
+    background-color: blue;
+    border-radius:20px;
+     margin-left:10px;
+     outline:none;
+     border:none;
+}
+.addrole{
+    border-radius:20px; 
+    background-color:goldenrod;
+    color:white;
+    float:right;
+    outline:none;
+    border:none;
+    margin-right:50px;
+     font-size:16px; 
+    padding:"10px 15px 10px 15px"; 
+    margin-top:10px;  
+}
+.editbtn{
+    outline:none;
+    border:none; 
+    margin-left:10px;
+}
+.updatebtn{
+    outline:none;
+    border:none;
+    color:white;
+    border-radius:20px;
+    background-color:blue;
+}
+.deletebtn{
+    background-color: blue;
+    color:white;
+    border-radius:20px;
+    outline:none;
+    border:none;
+}
+td,th,tr,thead{
+    border:1px solid black;
+} 
+.clearbtn{
+    background-color:blue;
+    color:white;
+    border-radius:20px;
+    outline:none;
+    border:none;
+}
+.cancelbtn{
+    background-color:blue;
+    color:white;
+    border-radius:20px;
+    outline:none;
+    margin-left:5px;
+    border:none;
+}
+#tab{
+    margin:0px 0px 0px 10px; 
+}
+.rid{
+    border:none;
+    outline:none;
+    border-bottom:1px solid black;
+}
+.rname{
+    border:none;
+    outline:none;
+    border-bottom:1px solid black;
+}
+.select{
+    border:none;
+    outline:none;
+}
